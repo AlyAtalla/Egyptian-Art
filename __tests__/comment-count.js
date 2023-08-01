@@ -74,4 +74,11 @@ describe('test comment count', () => {
     commentCounter();
     expect(comments.querySelector('#comments-count').textContent).toBe('(3)');
   });
+
+  it('should return 0 when there are no comments', () => {
+    commentsArray.length = 0;
+    appendComments(getComments());
+    commentCounter();
+    expect(comments.querySelector('#comments-count').textContent).toBe('(0)');
+  });
 });
