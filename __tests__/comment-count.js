@@ -67,6 +67,7 @@ describe('test comment count', () => {
     commentCounter();
     expect(comments.querySelector('#comments-count').textContent).toBe('(2)');
   });
+
   it('should return 3', () => {
     postComment();
     appendComments(getComments());

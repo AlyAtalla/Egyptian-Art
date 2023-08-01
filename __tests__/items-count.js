@@ -24,4 +24,12 @@ describe('items-counter-tests', () => {
 
     expect(itemsCounter()).toBe(items.length);
   });
+
+  it('should return 0 when there are no items in the container', () => {
+    displayItems();
+
+    itemsContainer.innerHTML = '';
+
+    expect(itemsCounter()).toBe(0);
+  });
 });
